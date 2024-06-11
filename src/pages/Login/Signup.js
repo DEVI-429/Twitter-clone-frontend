@@ -6,7 +6,7 @@ import XIcon from '@mui/icons-material/X';
 import styles from './Signup.module.css';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import GoogleButton from 'react-google-button';
+// import GoogleButton from 'react-google-button';
 import { Link, useNavigate } from 'react-router-dom';
 import googleimage from '../../assets/images/googleimage.png'
 import axios from 'axios';
