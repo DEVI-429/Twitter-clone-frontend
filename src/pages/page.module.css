@@ -1,0 +1,20 @@
+.page{
+    /* flex:0.4; */
+    width: 100vw;
+    border-right: 1px solid var(--twitter-background);
+    padding: 0 18px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.pageTitle{
+    /* color: var(--twitter-color); */
+    /* text-align: center; */
+    font-size: 20px;
+}
+
+.page::-webkit-scrollbar{
+    display: none;
+}

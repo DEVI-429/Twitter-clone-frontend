@@ -1,0 +1,13 @@
+.profilePage{
+    /* flex: 0.4; */
+    width: 100vw;
+    border: 1px solid var(--twitter-background);
+    min-width: auto;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 0 18px;
+}
+
+.profilePage::-webkit-scrollbar{
+    display: none;
+}

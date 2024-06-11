@@ -1,0 +1,230 @@
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+.imagecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 70%;
+    height: 100vh;
+}
+
+.twitterIcon{
+    display: none;
+}
+
+.loginformcontainer{
+    width: 50%;
+}
+
+.image{
+    height: 50%;
+}
+
+.heading{
+    font-size: 64px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 8px 0;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #696868;
+  }
+  
+  .text {
+    margin: 0 10px;
+    color: #666;
+  }
+  
+  .formcontainer1{
+    width: 50%;
+  }
+
+  .input{
+    width: 97%;
+    height: 45px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(97, 96, 96);
+    background: none;
+    border-radius: 3px;
+    outline: none;
+    color: white;
+    padding-left: 10px;
+  }
+
+.input:focus{
+    border:2px solid #1D9Bf0;
+}
+
+  .signup{
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+  }
+
+  .googlebutton{
+    width: 100%;
+  }
+
+  .gbtn{
+    width: 100%;
+  }
+  
+  /* In your CSS file (e.g., Signup.module.css) */
+.customGoogleButton {
+    background-color: #4285F4; /* Google blue */
+    color: white;
+    border: none;
+    width: 100%;
+    height: 49px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.customGoogleButton:hover {
+    background-color: #357ae8; 
+    border: 1px solid lightblue;
+}
+
+.googleimage{
+    height: 100%;
+    width: 48px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-bottom: -4px;
+}
+
+.heading1{
+    font-size: 31px;
+}
+
+@media (max-width: 900px) {
+
+    .maincontainer{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagecontainer {
+        display: none;
+    }
+
+    .twitterIcon {
+        display: block;
+    }
+
+    .formcontainer {
+        width: 40%;
+    }
+
+    .loginformcontainer {
+        width: 40%;
+    }
+
+    .formcontainer1 {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+
+    .heading1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .maincontainer{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagecontainer {
+        display: none;
+    }
+
+    .twitterIcon {
+        display: block;
+    }
+
+    .formcontainer {
+        width: 50%;
+    }
+
+    .loginformcontainer {
+        width: 50%;
+    }
+
+    .formcontainer1 {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .heading1{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .maincontainer{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagecontainer {
+        display: none;
+    }
+
+    .twitterIcon {
+        display: block;
+    }
+
+    .formcontainer {
+        width: 60%;
+    }
+
+    .loginformcontainer {
+        width: 60%;
+    }
+
+    .formcontainer1 {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .heading1{
+        font-size: 15px;
+    }
+}
+

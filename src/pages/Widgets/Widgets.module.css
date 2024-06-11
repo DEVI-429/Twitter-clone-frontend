@@ -1,0 +1,64 @@
+.widgets{
+    min-width: fit-content;
+    flex: 0.3;
+    overflow-y: scroll;
+    padding: 10px 20px;
+}
+
+.widgets::-webkit-scrollbar{
+    display: none;
+}
+
+.widgetsInput{
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.widgetsInput>input{
+    border: none;
+    margin-top:0px ;
+    background-color: var(--twitter-background);
+}
+
+.widgetsSearchIcon{
+    color: gray;
+}
+
+.widgetContainer{
+    margin-top: 15px;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+}
+
+.widgetContainer>h2{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.Search{
+    border: none;
+    outline: none;
+}
+
+/* @media screen and (max-width:1200px){
+    .widgets{
+        width: 200px !important;
+    }
+
+    .twitter{
+        width: 50px !important;
+    }
+} */
+
+@media screen and (max-width:960px){
+    .widgets{
+        display: none;
+    }
+}

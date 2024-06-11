@@ -1,0 +1,172 @@
+.editProfileButton {
+    border: 1px solid;
+    border-radius: 2rem;
+    background-color: white;
+    padding: 10px;
+    margin-right: 20px;
+  }
+  
+  .editProfileButton:hover {
+    background-color: rgb(207, 206, 206);
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+  
+  .modal::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    z-index: 1;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+  }
+  
+  .header>.headerTitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+  }
+  
+  .header>.saveBtn {
+    margin-right: 10px;
+    color: aliceblue;
+    background-color: black;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+  
+  .headerTwitterIcon {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    background-color: white;
+    top: 0px;
+    position: sticky;
+    width: 30px;
+  }
+  
+  .headerTwitterIcon>.twitterIcon {
+    color: var(--twitter-color);
+    font-size: 35px !important;
+    margin: 250px;
+  }
+  
+  .backgroundImage {
+    height: 200px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #b4b7b9;
+    margin-bottom: 5px;
+  }
+  
+  .profileTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 15px;
+  }
+  
+  .profileImage {
+    width: 134px;
+    height: 134px;
+    margin-top: -80px;
+    background-color: var(--twitter-background);
+    padding: 0px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profileImage>.MuiAvatar-root {
+    width: 134px;
+    height: 134px;
+    margin-left: 10px;
+  }
+  
+  .fillContent {
+    margin: 20px;
+  }
+  
+  .fillContent > .MuiFormControl-root {
+    margin-bottom: 20px; /* Ensure spacing between TextFields */
+  }
+  
+  .fillContent > .MuiFormControl-root .MuiInputBase-root {
+    background-color: #f0f0f0; /* Example of overriding background color */
+  }
+  
+  .fillContent > .MuiFormControl-root .MuiInputLabel-root {
+    color: #333; /* Custom label color */
+  }
+  
+  .fillContent > .MuiFormControl-root .MuiFilledInput-root {
+    padding: 10px; /* Custom padding */
+  }
+
+.birthDateSection{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.birthDateSection p{
+    font-weight: 600;
+    padding-left: 5px;
+    margin-bottom: -8px;
+}
+
+.birthDateSection text{
+    color: rgb(135,214,250);
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    justify-content: center;
+}
+
+.text > .eButton{
+    margin: 10px;
+    color: rgb(255,255,255);
+    background-color: black;
+    border-radius: 20px;
+}
+
+.lastSection h2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.lastSection>.lastBtn{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+}
+
+.lastSection>.lastBtn:hover{
+    background-color: #b4b7b9;
+}
