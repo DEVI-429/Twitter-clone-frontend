@@ -21,6 +21,9 @@
     font-size: 20px;
     border: none;
     margin-top: 0;
+    height: 35px;
+    outline-color: grey;
+    border-radius: 10px;
 }
 
 .tweetBoxImageInput{
@@ -48,6 +51,7 @@
 .imageIcon{
     color: var(--twitter-color);
     padding-left: 25px;
+    cursor: pointer;
 }
 
 .imageInput{

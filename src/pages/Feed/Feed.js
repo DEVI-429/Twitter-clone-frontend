@@ -1,8 +1,8 @@
 import axios from 'axios';
 import styles from '../page.module.css'
-import TweetBox from './TweetBox'
 import React, { useEffect, useState } from 'react'
 import Post from './Post/Post'
+import TweetBox from './TweetBox'
 
 function Feed() {
 
