@@ -57,3 +57,10 @@
 .postAvatar{
     padding: 20px;
 }
+
+
+.footerItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

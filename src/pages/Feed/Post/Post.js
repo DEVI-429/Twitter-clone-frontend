@@ -8,7 +8,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PublishIcon from '@mui/icons-material/Publish';
 
 function Post({ p }) {
-  const { post, media, profilePic, username, name } = p;
+  const { post, media, profilePic, username, name, upvoteCount } = p;
 
   // Function to determine media type
   const renderMedia = (media) => {
@@ -43,7 +43,7 @@ function Post({ p }) {
         <div className={styles.postFooter}>
           <ChatBubbleOutlineIcon className={styles.postFooterIcon} fontSize='small' />
           <RepeatIcon className={styles.postFooterIcon} fontSize='small' />
-          <FavoriteBorderIcon className={styles.postFooterIcon} fontSize='small' />
+          <div className={styles.footerItem}><FavoriteBorderIcon className={styles.postFooterIcon} fontSize='small' /><span>{upvoteCount}</span></div>
           <PublishIcon className={styles.postFooterIcon} fontSize='small' />
         </div>
       </div>

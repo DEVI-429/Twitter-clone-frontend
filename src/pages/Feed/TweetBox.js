@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styles from './TweetBox.module.css';
 import { Avatar, Button } from '@mui/material';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
-import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 import axios from 'axios';
 import useLoggedInUser from '../../hooks/useLoggedInUser';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -14,18 +13,49 @@ function Tweetbox() {
 
     const [post, setPost] = useState("");
     const [mediaURL, setMediaURL] = useState("");
-    const [mediaType, setMediaType] = useState(""); // New state to track media type
+    const [mediaType, setMediaType] = useState(""); 
     const [isLoading, setIsLoading] = useState(false);
     const [name, setName] = useState("");
     const [username, setUserName] = useState("");
     const [loggedInUser] = useLoggedInUser();
     const userProfilePic = loggedInUser[0]?.profileImage || 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png';
 
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; 
+    const MAX_VIDEO_DURATION = 30;
+
     const handleUploadMedia = (e) => {
         setIsLoading(true);
         const file = e.target.files[0];
-        console.log(file);
+        
+        if (file.size > MAX_FILE_SIZE) {
+            alert("File size should not exceed 5 MB");
+            setIsLoading(false);
+            return;
+        }
 
+        if (file.type.startsWith('video')) {
+            const video = document.createElement('video');
+            video.preload = 'metadata';
+
+            video.onloadedmetadata = () => {
+                window.URL.revokeObjectURL(video.src);
+
+                if (video.duration > MAX_VIDEO_DURATION) {
+                    alert("Video duration should not exceed 30 seconds");
+                    setIsLoading(false);
+                    return;
+                }
+
+                uploadFile(file);
+            };
+
+            video.src = URL.createObjectURL(file);
+        } else {
+            uploadFile(file);
+        }
+    };
+
+    const uploadFile = (file) => {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('upload_preset', 'twitter_clone'); // Replace with your upload preset
@@ -69,7 +99,8 @@ function Tweetbox() {
                 profilePic: userProfilePic,
                 username: username,
                 name: name,
-                email: email
+                email: email,
+                upvoteCount: mediaType === 'video' ? Math.floor(Math.random() * 30) + 1 : 0 // Set upvoteCount for video
             };
             setPost('');
             setMediaURL('');
