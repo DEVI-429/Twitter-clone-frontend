@@ -8,7 +8,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 function Tweetbox() {
-    const base_url = process.env.BASE_URL
+    const base_url = process.env.REACT_APP_BASE_URL
     const [user] = useAuthState(auth);
     const email = user?.email;
 
